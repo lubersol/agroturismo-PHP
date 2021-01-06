@@ -13,7 +13,13 @@ class Room extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('rooms', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->foreign('rentId')->references('id')->on('rents');
+            $table->string('title')->unique();
+        });
+   
     }
 
     /**
@@ -23,6 +29,7 @@ class Room extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('rooms');
+
     }
 }
