@@ -1,8 +1,8 @@
-## PROYECTO AGROTURISMO PHP - LARAVEL :waving_hand_light_skin_tone:
+# PROYECTO AGROTURISMO PHP - LARAVEL :waving_hand_light_skin_tone:
 
-API REST creada sobre un Agroturismo en el norte de Mallorca, destinada a nutrir las vistas de la parte Frontend creada con React (proyecto Agroturismo-REACT).
+API REST creada sobre una website de Agroturismo, destinada a nutrir las vistas de la parte Frontend creada con React (proyecto Agroturismo-REACT). Se usa también **Git, ES6, Postman**.
 
-# DESCRIPCION :open_book::
+## DESCRIPCION :open_book:
 
 La API dispondrá de:
 
@@ -13,21 +13,21 @@ La API dispondrá de:
 * Relación tablas M to M y 1 to M.
 * Seeders en las diferentes tablas.
 
-# TECNOLOGÍAS :gear::
+## TECNOLOGÍAS :gear:
 
-* PHP 
-* LARAVEL
-* MYSQL
-* GIT FLOW
+**PHP**
+**LARAVEL**
+**MYSQL**
+**GIT FLOW**
 
-# DIAGRAMA E-R TABLAS PHP-MyAdmin globe_with_meridians:
-
-
-
-# RUTAS CON POSTMAN earth_americas:
+## DIAGRAMA E-R TABLAS PHP-MyAdmin :globe_with_meridians:
 
 
 
-# AUTOR :woman_technologist::
+## RUTAS CON POSTMAN :earth_americas:
+
+
+
+## AUTOR :woman_technologist:
 
 Lucía Bermejo Solivellas
