@@ -2,10 +2,11 @@
 
 ![Screenshot](public/naturaleza.gif)
 
+## INTRODUCCIÓN :open_book:
 
-API REST creada sobre una website de Agroturismo, destinada a nutrir las vistas de la parte Frontend creada con React (proyecto Agroturismo-REACT). Se usa también **Git, ES6, Postman**.
+API REST creada como una website de Agroturismo, destinada a nutrir las vistas de la parte Frontend creada con React (proyecto Agroturismo-VP-REACT). 
 
-## DESCRIPCION :open_book:
+## DESCRIPCIÓN :open_book:
 
 La API dispondrá de:
 
@@ -21,6 +22,7 @@ La API dispondrá de:
 * PHP.
 * LARAVEL.
 * MYSQL.
+* GIT.
 * GIT FLOW.
 
 ## DIAGRAMA E-R TABLAS PHP-MyAdmin :globe_with_meridians:
