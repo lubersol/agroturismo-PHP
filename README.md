@@ -1,4 +1,7 @@
-# PROYECTO AGROTURISMO PHP - LARAVEL :waving_hand_light_skin_tone:
+# PROYECTO AGROTURISMO PHP - LARAVEL :wave:
+
+![Screenshot](public/naturaleza.gif)
+
 
 API REST creada sobre una website de Agroturismo, destinada a nutrir las vistas de la parte Frontend creada con React (proyecto Agroturismo-REACT). Se usa también **Git, ES6, Postman**.
 
@@ -15,10 +18,10 @@ La API dispondrá de:
 
 ## TECNOLOGÍAS :gear:
 
-**PHP**
-**LARAVEL**
-**MYSQL**
-**GIT FLOW**
+* PHP.
+* LARAVEL.
+* MYSQL.
+* GIT FLOW.
 
 ## DIAGRAMA E-R TABLAS PHP-MyAdmin :globe_with_meridians:
 
