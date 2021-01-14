@@ -5,8 +5,6 @@
 
 API creada en backend con PHP y Laravel para nutrir a una website de agroturismo "Varitx Paradise", destinada a hacer reservas para pasar vacaciones en una finca de agroturismo situada en el norte de Mallorca. 
 
-![Screenshot](public/logo_casa_vistas.png)
-
 
 ## DESCRIPCIÓN :open_book:
 
@@ -42,7 +40,6 @@ Hay dos roles en la API: cliente y admin. Como cliente puedes registrarte, hacer
 
 :round_pushpin:  post/logout (el usuario sale de su cuenta).
 
-:round_pushpin: 
 
 ### Reservas: :date:
 
@@ -58,6 +55,6 @@ Hay dos roles en la API: cliente y admin. Como cliente puedes registrarte, hacer
 
 ADJUNTAR IMAGEN CON LAS TABLAS Y SUS RELACIONES.
 
-### Enlace a Heroku del frontend de REACT: :link:
+## Enlace a Heroku del frontend de REACT :link:
 
 ADJUNTAR LINK CON EL PROYECTO SUBIDO A HEROKU
