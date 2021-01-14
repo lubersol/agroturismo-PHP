@@ -1,6 +1,9 @@
 # PROYECTO AGROTURISMO CREADO CON LARAVEL :four_leaf_clover:
 
-API REST creada en backend con PHP y Laravel para nutrir a una website de agroturismo "Varitx Paradise", destinada a hacer reservas para pasar vacaciones en una finca de agroturismo situada en el norte de Mallorca. 
+![Screenshot](public/images/treboles.gif)
+
+
+API creada en backend con PHP y Laravel para nutrir a una website de agroturismo "Varitx Paradise", destinada a hacer reservas para pasar vacaciones en una finca de agroturismo situada en el norte de Mallorca. 
 
 ![Screenshot](public/images/logo_casa_vistas.png)
 
