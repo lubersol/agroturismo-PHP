@@ -15,7 +15,11 @@ class CreateRentTable extends Migration
     {
         Schema::create('rent', function (Blueprint $table) {
             $table->id();
+            $table->date('startDate');
+            $table->date('endDate');
             $table->timestamps();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
