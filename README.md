@@ -1,62 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# PROYECTO AGROTURISMO CREADO CON LARAVEL :four_leaf_clover:
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+API REST creada en backend con PHP y Laravel para nutrir a una website de agroturismo "Varitx Paradise", destinada a hacer reservas para pasar vacaciones en una finca de agroturismo situada en el norte de Mallorca. 
 
-## About Laravel
+![Screenshot](public/images/logo_casa_vistas.png)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## DESCRIPCIÓN :open_book:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Hay dos roles en la API: cliente y admin. Como cliente puedes registrarte, hacer login, solicitar reservas, verlas y eliminarlas. Como administrador, puedes ver las reservas de todos los usuarios.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## TECNOLOGÍAS :gear:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+:large_blue_circle: PHP.
 
-## Laravel Sponsors
+:large_blue_circle: Laravel.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+:large_blue_circle: PHP MyAdmin.
 
-### Premium Partners
+:large_blue_circle: Composer.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+:large_blue_circle: Passport.
 
-## Contributing
+:large_blue_circle: GIT.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+:large_blue_circle: GIT FLOW.
 
-## Code of Conduct
+:large_blue_circle: Postman.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## ENDPOINTS :link:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Clientes: :bust_in_silhouette: 
 
-## License
+:round_pushpin:  post/user/register (añade un nuevo usuario).
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+:round_pushpin:  post/user/login (el usuario introduce su email y la contraseña para entrar).
+
+:round_pushpin:  post/logout (el usuario sale de su cuenta).
+
+:round_pushpin: 
+
+# Reservas: :date:
+
+:round_pushpin: post/rent/create (añade una nueva reserva).
+
+:round_pushpin: delete/rent/cancel/{id} (cancela la reserva de un usuario).
+
+:round_pushpin: get/rent/show (el usuario puede ver sus reservas).
+
+:round_pushpin: get/rent/showAll (el administrador puede ver todas las reservas de los usuarios). 
+
+## DIAGRAMA TABLAS PHP MYADMIN :bulb:
+
+ADJUNTAR IMAGEN CON LAS TABLAS Y SUS RELACIONES.
+
+# Enlace a Heroku del frontend de REACT: :link:
+
+ADJUNTAR LINK CON EL PROYECTO SUBIDO A HEROKU

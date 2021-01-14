@@ -15,9 +15,9 @@ class Room extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title')->unique();
             $table->timestamps();
             $table->foreign('rentId')->references('id')->on('rents');
-            $table->string('title')->unique();
         });
 
     }
