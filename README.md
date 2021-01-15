@@ -1,14 +1,16 @@
-# PROYECTO AGROTURISMO CREADO CON LARAVEL :four_leaf_clover:
+# PROYECTO AGROTURISMO CREADO CON PHP+LARAVEL+MYSQL :four_leaf_clover:
 
 ![Screenshot](public/treboles.gif)
 
 
-API creada en backend con PHP y Laravel para nutrir a una website de agroturismo "Varitx Paradise", destinada a hacer reservas para pasar vacaciones en una finca de agroturismo situada en el norte de Mallorca. 
+API creada en backend con PHP, Laravel y MySQL para nutrir a una website de agroturismo "Varitx Paradise", destinada a hacer reservas para pasar vacaciones en una finca de agroturismo situada en el norte de Mallorca. 
 
 
 ## DESCRIPCIÓN :open_book:
 
-Hay dos roles en la API: cliente y admin. Como cliente puedes registrarte, hacer login, solicitar reservas, verlas y eliminarlas. Como administrador, puedes ver las reservas de todos los usuarios.
+Hay dos roles en la API: cliente y administrador.
+Como *cliente* puedes registrarte, hacer login, solicitar, ver y eliminar reservas.
+Como *administrador*, puedes ver las reservas de todos los usuarios.
 
 
 ## TECNOLOGÍAS :gear:
@@ -25,7 +27,7 @@ Hay dos roles en la API: cliente y admin. Como cliente puedes registrarte, hacer
 
 :large_blue_circle: GIT.
 
-:large_blue_circle: GIT FLOW.
+:large_blue_circle: Git Flow.
 
 :large_blue_circle: Postman.
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRentTable extends Migration
+class CreateRentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateRentTable extends Migration
      */
     public function up()
     {
-        Schema::create('rent', function (Blueprint $table) {
-            $table->id();
+        Schema::create('rents', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->date('startDate');
             $table->date('endDate');
+            $table->unsignedBigInteger('user_id');//relacion con tabla users
+            $table->foreign('user_id')->references('id')->on('users');//clave ajena relacionada con tabla users
+            $table->unsignedBigInteger('room_id');//relacion con tabla rooms
             $table->timestamps();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -30,6 +31,6 @@ class CreateRentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rent');
+        Schema::dropIfExists('rents');
     }
 }
