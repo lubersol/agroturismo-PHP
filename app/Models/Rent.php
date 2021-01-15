@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Rent extends Model
 {
     use HasFactory;
+    
 
     protected $guarded = [];
     
@@ -16,7 +17,7 @@ class Rent extends Model
         return $this->belongsTo('App\Models\User', 'user_id', 'id');
     }
     public function rooms(){
-        return $this->belongsToMany(Room::class); // Muchos a muchos
+        return $this->belongsToMany(Room::class,'rent_room','rent_id','room_id'); // Muchos a muchos
     }
-
+    
 }
