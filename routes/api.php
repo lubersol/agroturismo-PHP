@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +15,28 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('/', function(){
+    return response()->json(['message' => 'up and running!'], 200);
+}); 
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('client/register', [UserController::class,'store']); //Registro usuarios.
+Route::post('client/login', [UserController::class,'login'])->name('login');   //Login usuarios.
+
+Route::group(['middleware'=> ['auth:api']], function () {
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+
+    Route::apiResource('users', UserController::class); 
+    
+    Route::post('client/logout', [UserController::class,'logout']); //Logout.
+    
+    Route::post('rent/create', [RentController::class,'store']); //Crea reserva.
+    Route::get('rent/show', [RentController::class,'index']);
+    Route::delete('rent/cancel/{id}', [RentController::class,'destroy']); //Cancela reserva.
+
+    Route::group(['middleware' => ['rol:admin']], function () {
+        Route::get('/rent/showAll', [RentController::class, 'indexAll']); //Muestra reservas. 
+    });
+
 });
