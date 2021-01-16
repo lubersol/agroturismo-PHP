@@ -15,28 +15,28 @@ use App\Http\Controllers\RentController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('/', function(){
+
+Route::get('/', function () {
     return response()->json(['message' => 'up and running!'], 200);
-}); 
+});
 
-Route::post('client/register', [UserController::class,'store']); //Registro usuarios.
-Route::post('client/login', [UserController::class,'login'])->name('login');   //Login usuarios.
+Route::post('user/register', [UserController::class, 'store']); //Registro usuarios.
+Route::post('user/login', [UserController::class, 'login'])->name('login');   //Login usuarios.
 
-Route::group(['middleware'=> ['auth:api']], function () {
+Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
 
-    Route::apiResource('users', UserController::class); 
-    
-    Route::post('client/logout', [UserController::class,'logout']); //Logout.
-    
-    Route::post('rent/create', [RentController::class,'store']); //Crea reserva.
-    Route::get('rent/show', [RentController::class,'index']);
-    Route::delete('rent/cancel/{id}', [RentController::class,'destroy']); //Cancela reserva.
+    Route::apiResource('users', UserController::class);
+
+    Route::post('user/logout', [UserController::class, 'logout']); //Logout.
+
+    Route::post('rent/create', [RentController::class, 'store']); //Crea reserva.
+    Route::get('rent/show', [RentController::class, 'index']);
+    Route::delete('rent/cancel/{id}', [RentController::class, 'destroy']); //Cancela reserva.
 
     Route::group(['middleware' => ['rol:admin']], function () {
         Route::get('/rent/showAll', [RentController::class, 'indexAll']); //Muestra reservas. 
     });
-
 });
