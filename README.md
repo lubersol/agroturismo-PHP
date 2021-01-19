@@ -15,9 +15,9 @@ Como *administrador*, puedes ver las reservas de todos los usuarios.
 
 ## TECNOLOGÍAS :gear:
 
-:large_blue_circle: PHP.
+:large_blue_circle: PHP 8.
 
-:large_blue_circle: Laravel.
+:large_blue_circle: Laravel 6.
 
 :large_blue_circle: PHP MyAdmin.
 
@@ -30,6 +30,8 @@ Como *administrador*, puedes ver las reservas de todos los usuarios.
 :large_blue_circle: Git Flow.
 
 :large_blue_circle: Postman.
+
+:large_blue_circle: Eloquent.
 
 
 ## ENDPOINTS :link:
