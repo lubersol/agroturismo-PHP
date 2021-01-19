@@ -19,8 +19,8 @@ class CreateRentsTable extends Migration
             $table->date('endDate');
             $table->unsignedBigInteger('user_id');//relacion con tabla users
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');//clave ajena relacionada con tabla users
-            $table->unsignedBigInteger('room_id');//relacion con tabla users
-            $table->foreign('room_id')->references('id')->on('rooms')->onDelete('cascade');//clave ajena relacionada con tabla rooms
+           // $table->unsignedBigInteger('room_id');//relacion con tabla users
+            //$table->foreign('room_id')->references('id')->on('rooms')->onDelete('cascade');//clave ajena relacionada con tabla rooms
             $table->timestamps();
         });
     }
