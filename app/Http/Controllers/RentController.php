@@ -15,14 +15,14 @@ class RentController extends Controller
     public function indexAll()
     {
         return Rent::all();
-    }
+    }//Muestra las reservas
 
     public function index()
     {
         $user = Auth::user();
         $rents = Rent::where('user_id', '=', $user->id)->get();
         return $rents;
-    }
+    }//Muestra las reservas de un usuario concreto
 
     public function store(Request $request)
     {

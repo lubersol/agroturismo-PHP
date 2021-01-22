@@ -38,16 +38,16 @@ Como *administrador*, puedes ver las reservas de todos los usuarios.
 
 ### Clientes: :bust_in_silhouette: 
 
-:round_pushpin:  post/user/register (añade un nuevo usuario).
+:round_pushpin: POST localhost:8000/api/auth/register (añade un nuevo usuario).
 
-:round_pushpin:  post/user/login (el usuario introduce su email y la contraseña para entrar).
+:round_pushpin: POST localhost:8000/api/auth/login (el usuario introduce su email y la contraseña para entrar).
 
-:round_pushpin:  post/logout (el usuario sale de su cuenta).
+:round_pushpin: GET localhost:8000/api/auth/logout (el usuario sale de su cuenta).
 
 
 ### Reservas: :date:
 
-:round_pushpin: post/rent/create (añade una nueva reserva).
+:round_pushpin: POST localhost:8000/api/auth/rent/create (añade una nueva reserva).
 
 :round_pushpin: delete/rent/cancel/{id} (cancela la reserva de un usuario).
 

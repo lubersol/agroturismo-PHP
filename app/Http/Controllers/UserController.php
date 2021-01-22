@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all(); 
+        $users = User::all();
         return $users;
     }
     /**
@@ -75,28 +75,18 @@ class UserController extends Controller
         //     $this->scope = $userRole->role;
         // }
 
-        $tokenResult = $user->createToken('Personal Access Token');
+        $token = $user->createToken('Personal Access Token');
+        // if ($request->remember_me)
+        //     $token->expires_at = Carbon::now()->addWeeks(1);
+        // $token->save();
 
         return response()->json([
-            'access_token' => $tokenResult->accessToken,
+            'access_token' => $token->accessToken,
+            // 'token_type' => 'Bearer',
+            // 'expires_at' => Carbon::parse($token->expires_at)->toDateTimeString()
         ]);
-
-        }
-
-    //     if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-    //         $user = Auth::user();
-    //         $token = $user->createToken('userToken')->accessToken;
-
-    //         $respuesta = [];
-    //         $respuesta['name'] = $user->name;
-    //         $respuesta['token'] = $token;
-    //         $respuesta['rol'] = $user->rol;
-    //         return response()->json($respuesta, 200);
-    //     } else {
-    //         return response()->json(['error' => 'Not authenticated.'], 401);
-    //     }
-     //}
-    /**
+    }
+    /*
      * Cierre de sesión (anular el token)
      */
     public function logout(Request $request)
@@ -107,11 +97,6 @@ class UserController extends Controller
             'message' => 'Successfully logged out'
         ]);
     }
-        // $token = $request->user()->token();
-        // $token->revoke();
-
-        // return response()->json('Logout done successfully.', 200);
-    
 
     /**
      * Display the specified resource.

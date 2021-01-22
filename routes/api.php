@@ -16,27 +16,24 @@ use App\Http\Controllers\RentController;
 |
 */
 
-Route::get('/', function () {
-    return response()->json(['message' => 'servidor corriendo'], 200);
-});
-
-Route::post('user/register', [UserController::class, 'signUp']); //Registro usuarios.
-Route::post('user/login', [UserController::class, 'login']);   //Login usuarios.
-
-Route::group(['middleware' => ['auth:api']], function () {
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
-
-    Route::apiResource('users', UserController::class);
-
-    Route::post('client/logout', [UserController::class, 'logout']); //Logout.
-
+Route::group([
+    'prefix' => 'auth'
+], function () {
+    //localhost:8000/api/auth/register
+    Route::post('register', [UserController::class, 'signUp']); //Registro usuarios.
+    //localhost:8000/api/auth/login
+    Route::post('login', [UserController::class, 'login']);   //Login usuarios.
     Route::post('rent/create', [RentController::class, 'store']); //Crea reserva.
     Route::get('rent/show', [RentController::class, 'index']);
     Route::delete('rent/cancel/{id}', [RentController::class, 'destroy']); //Cancela reserva.
 
-    // Route::group(['middleware' => ['rol:admin']], function () {
-    //     Route::get('/rent/showAll', [RentController::class, 'indexAll']); //Muestra reservas. 
-    // });
+    Route::group(['middleware' => ['auth:api']], function () {
+        //localhost:8000/api/auth/user
+        Route::get('/user', function (Request $request) {
+            return $request->user();//Obtiene un usuario introduciendo el token en el header.
+        });
+        //localhost:8000/api/auth/logout
+        Route::get('logout', [UserController::class, 'logout']); //Logout.
+        // Route::apiResource('users', UserController::class);
+    });
 });
