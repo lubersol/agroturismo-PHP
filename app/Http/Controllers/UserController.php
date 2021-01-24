@@ -104,9 +104,9 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Integer $id)
-    {
-        $user = DB::table('users')->where('id', '=', $id)->get();
-        return $user;
-    }
+    // public function show(Integer $id)
+    // {
+    //     $user = DB::table('users')->where('id', '=', $id)->get();
+    //     return $user;
+    // }
 }
