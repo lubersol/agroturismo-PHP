@@ -14,10 +14,10 @@ class Rent extends Model
     
     public function users()
     {
-        return $this->belongsTo('App\Models\User', 'user_id', 'id');
+        return $this->belongsTo('App\Models\User');
     }
     public function rooms(){
-        return $this->belongsToMany(Room::class,'rent_room','rent_id','room_id'); // Muchos a muchos
+        return $this->belongsToMany(Room::class); // Muchos a muchos
     }
     
 }
