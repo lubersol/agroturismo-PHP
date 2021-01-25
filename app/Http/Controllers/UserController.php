@@ -22,33 +22,51 @@ class UserController extends Controller
      */
     public function signUp(Request $request)
     {
-        $input = $request->all();
-        $input['password'] = bcrypt($input['password']);
+        $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|string|email|unique:users',
+            'password' => 'required|string'
+        ]);
 
-        $rules = [
-            'name' => 'required',
-            'email' => 'required',
-            'password' => 'required'
-        ];
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password)
+        ]);
 
-        $messages = [
-            'name.required' => 'The name field is empty.',
-            'email.required' => 'The email field is empty.',
-            'password.required' => 'The password field is empty.'
-        ];
-
-        $validator = Validator::make($input, $rules, $messages);
-
-        if ($validator->fails()) {
-            return response()->json([$validator->errors()], 400);
-        } else {
-            $user = User::create($input);
-            return $user;
-        }
+        return response()->json([
+            'message' => 'Successfully created user!'
+        ], 201);
     }
+    //     $input = $request->all();
+    //     $input['password'] = bcrypt($input['password']);
+
+    //     $rules = [
+    //         'name' => 'required',
+    //         'email' => 'required',
+    //         'password' => 'required'
+    //     ];
+
+    //     $messages = [
+    //         'name.required' => 'The name field is empty.',
+    //         'email.required' => 'The email field is empty.',
+    //         'password.required' => 'The password field is empty.'
+    //     ];
+
+    //     $validator = Validator::make($input, $rules, $messages);
+
+    //     if ($validator->fails()) {
+    //         return response()->json([$validator->errors()], 400);
+    //     } else {
+    //         $user = User::create($input);
+    //         return $user;
+    //     }
+    // }
     /**
      * Inicio de sesión y creación de token
      */
+
+   
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -69,21 +87,10 @@ class UserController extends Controller
             return response()->json(['message' => 'Unauthorized'], 401);
 
         $user = $request->user();
-        //$userRole = $user->role()->first();
-
-        // if ($userRole) {
-        //     $this->scope = $userRole->role;
-        // }
-
         $token = $user->createToken('Personal Access Token');
-        // if ($request->remember_me)
-        //     $token->expires_at = Carbon::now()->addWeeks(1);
-        // $token->save();
 
         return response()->json([
             'access_token' => $token->accessToken,
-            // 'token_type' => 'Bearer',
-            // 'expires_at' => Carbon::parse($token->expires_at)->toDateTimeString()
         ]);
     }
     /*

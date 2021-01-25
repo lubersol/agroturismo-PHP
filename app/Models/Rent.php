@@ -8,9 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Rent extends Model
 {
     use HasFactory;
+    public $table = 'rents';
+    public $timestampstimestamps = false;
     
 
-    protected $guarded = [];
+    protected $fillable = [
+        'startDate',
+        'endDate',
+        // 'room_id',
+        // 'user_id'
+    ];
     
     public function user()
     {

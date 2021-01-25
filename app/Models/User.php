@@ -14,6 +14,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+    public $table = "users";
 
     /**
      * The attributes that are mass assignable.
@@ -48,6 +49,5 @@ class User extends Authenticatable
     public function rents()
     {
         return $this->hasMany('App\Models\Rent');
-        return $this->belongsToMany('App\Models\User');
     }
 }

@@ -24,7 +24,7 @@ Route::group([
     //localhost:8000/api/auth/login
     Route::post('login', [UserController::class, 'login']);   //Login usuarios.
     Route::post('rent/create', [RentController::class, 'store']); //Crea reserva.
-    Route::get('rent/show', [RentController::class, 'show']);
+    Route::get('rent/show/{id}', [RentController::class, 'index']);
     Route::delete('rent/cancel/{id}', [RentController::class, 'destroy']); //Cancela reserva.
 
     Route::group(['middleware' => ['auth:api']], function () {
