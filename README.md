@@ -57,7 +57,7 @@ Como *administrador*, puedes ver las reservas de todos los usuarios.
 
 ## DIAGRAMA TABLAS PHP MYADMIN :bulb:
 
-ADJUNTAR IMAGEN CON LAS TABLAS Y SUS RELACIONES.
+![Screenshot](public/diagrama.png)
 
 ## Enlace a Heroku del frontend de REACT :link:
 
