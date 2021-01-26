@@ -31,8 +31,8 @@ class RentController extends Controller
         $validator = Validator::make($request->all(), [
             'startDate'=>'required',
             'endDate'=>'required',
-            // 'room_id'=>'required',
-            // 'user_id'=>'required',  
+            'room_id'=>'required',
+            'user_id'=>'required',  
         ]);
         if ($validator->fails()) {
             return [

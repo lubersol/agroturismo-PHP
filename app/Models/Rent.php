@@ -15,8 +15,8 @@ class Rent extends Model
     protected $fillable = [
         'startDate',
         'endDate',
-        // 'room_id',
-        // 'user_id'
+        'room_id',
+        'user_id'
     ];
     
     public function user()
