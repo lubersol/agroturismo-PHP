@@ -15,8 +15,8 @@ class CreateRentsTable extends Migration
     {
         Schema::create('rents', function (Blueprint $table) {
             $table->id();
-            $table->date('startDate');
-            $table->date('endDate');
+            $table->string('startDate');
+            $table->string('endDate');
             $table->timestamps();
             $table->bigInteger('room_id')->unsigned();
             $table->bigInteger('user_id')->unsigned();

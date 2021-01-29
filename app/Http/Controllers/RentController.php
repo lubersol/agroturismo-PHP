@@ -19,7 +19,7 @@ class RentController extends Controller
 
     public function index($id)
     {
-        $rents = DB::table('users')->where('id', '=', $id)->get();
+        $rents = DB::table('rents')->where('user_id', '=', $id)->get();
         return $rents;
         // $user = Auth::user();
         // $rents = Rent::where('user_id', '=', $user->id)->get();
