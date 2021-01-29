@@ -37,3 +37,4 @@ Route::group([
         Route::get('logout', [UserController::class, 'logout']); //Logout.
     });
 });
+Route::post('/user', [AuthController::class, 'signUp']);
