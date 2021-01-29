@@ -35,6 +35,5 @@ Route::group([
         });
         //localhost:8000/api/auth/logout
         Route::get('logout', [UserController::class, 'logout']); //Logout.
-        // Route::apiResource('users', UserController::class);
     });
 });

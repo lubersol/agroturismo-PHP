@@ -39,35 +39,9 @@ class UserController extends Controller
             'message' => 'Successfully created user!'
         ], 201);
     }
-    //     $input = $request->all();
-    //     $input['password'] = bcrypt($input['password']);
-
-    //     $rules = [
-    //         'name' => 'required',
-    //         'email' => 'required',
-    //         'password' => 'required'
-    //     ];
-
-    //     $messages = [
-    //         'name.required' => 'The name field is empty.',
-    //         'email.required' => 'The email field is empty.',
-    //         'password.required' => 'The password field is empty.'
-    //     ];
-
-    //     $validator = Validator::make($input, $rules, $messages);
-
-    //     if ($validator->fails()) {
-    //         return response()->json([$validator->errors()], 400);
-    //     } else {
-    //         $user = User::create($input);
-    //         return $user;
-    //     }
-    // }
     /**
      * Inicio de sesión y creación de token
      */
-
-   
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
