@@ -63,4 +63,4 @@ Como *administrador*, puedes ver las reservas de todos los usuarios.
 
 ## Enlace a Heroku del frontend de REACT :link:
 
-ADJUNTAR LINK CON EL PROYECTO SUBIDO A HEROKU
+https://varitxparadise.herokuapp.com/
