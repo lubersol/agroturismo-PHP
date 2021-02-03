@@ -64,3 +64,13 @@ Como *administrador*, puedes ver las reservas de todos los usuarios.
 ## Enlace a Heroku del frontend de REACT :link:
 
 https://varitxparadise.herokuapp.com/
+
+## Instalacion :hammer_and_wrench:
+
+:gear: composer update
+
+:gear: php artisan migrate
+
+:gear: php artisan passport:install
+
+:gear:php artisan serve (levantar el servidor)
