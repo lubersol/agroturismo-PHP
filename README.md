@@ -51,11 +51,11 @@ Como *administrador*, puedes ver las reservas de todos los usuarios.
 
 :round_pushpin: POST localhost:8000/api/auth/rent/create (añade una nueva reserva).
 
-:round_pushpin: delete/rent/cancel/{id} (cancela la reserva de un usuario).
+:round_pushpin: DELETE localhost:8000/api/auth/rent/cancel/{id} (cancela la reserva de un usuario).
 
-:round_pushpin: get/rent/show (el usuario puede ver sus reservas).
+:round_pushpin: GET localhost:8000/api/auth/rent/show/{id} (el usuario puede ver sus reservas).
 
-:round_pushpin: get/rent/showAll (el administrador puede ver todas las reservas de los usuarios). 
+:round_pushpin: GET localhost:8000/api/auth/rent/showAll (el administrador puede ver todas las reservas de los usuarios). 
 
 ## DIAGRAMA TABLAS PHP MYADMIN :bulb:
 
