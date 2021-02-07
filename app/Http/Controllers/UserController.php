@@ -79,7 +79,7 @@ class UserController extends Controller
             'message' => 'Successfully logged out'
         ]);
     }
-
+    //Funcion para obtener de la base de datos el email
     public function getUserByEmail(String $email)
     {
         $userem = DB::table('users')->where('email', '=', $email)->get();

@@ -6,17 +6,19 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class DatabaseSeeder extends Seeder
+
+class RoomSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-       // \App\Models\Room::factory(10)->create();
-    }
+        DB::table('rooms')->insert([
+            'title' => Str::random(10),
+        ]);
 
-    
+    }
 }

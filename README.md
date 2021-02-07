@@ -5,6 +5,7 @@
 
 API REST creada en backend con PHP, Laravel y MySQL para nutrir a una website de agroturismo "Varitx Paradise", destinada a hacer reservas para pasar vacaciones en una finca de agroturismo situada en el norte de Mallorca. 
 
+***
 
 ## DESCRIPCIÓN :open_book:
 
@@ -14,6 +15,7 @@ Como *cliente* puedes registrarte, hacer login, solicitar, ver y eliminar reserv
 
 Como *administrador*, puedes ver las reservas de todos los usuarios.
 
+***
 
 ## TECNOLOGÍAS :gear:
 
@@ -35,27 +37,37 @@ Como *administrador*, puedes ver las reservas de todos los usuarios.
 
 :large_blue_circle: Eloquent.
 
+***
+
 
 ## ENDPOINTS :link:
 
 ### Clientes: :bust_in_silhouette: 
 
-:round_pushpin: POST localhost:8000/api/auth/register (añade un nuevo usuario).
+:round_pushpin: POST localhost:8000/api/register (añade un nuevo usuario).
 
-:round_pushpin: POST localhost:8000/api/auth/login (el usuario introduce su email y la contraseña para entrar).
+:round_pushpin: POST localhost:8000/api/login (el usuario introduce su email y la contraseña para entrar).
 
-:round_pushpin: GET localhost:8000/api/auth/logout (el usuario sale de su cuenta).
+:round_pushpin: GET localhost:8000/api/logout (el usuario sale de su cuenta).
+
+***
 
 
 ### Reservas: :date:
 
-:round_pushpin: POST localhost:8000/api/auth/rent/create (añade una nueva reserva).
+:round_pushpin: POST localhost:8000/api/rent (añade una nueva reserva).
 
-:round_pushpin: DELETE localhost:8000/api/auth/rent/cancel/{id} (cancela la reserva de un usuario).
+:round_pushpin: DELETE localhost:8000/api/rent/cancel/{id} (cancela la reserva de un usuario).
 
-:round_pushpin: GET localhost:8000/api/auth/rent/show/{id} (el usuario puede ver sus reservas).
+:round_pushpin: GET localhost:8000/api/rent/show/{id} (el usuario puede ver sus reservas).
 
-:round_pushpin: GET localhost:8000/api/auth/rent/showAll (el administrador puede ver todas las reservas de los usuarios). 
+***
+
+
+## POSTMAN ENDPOINTS
+
+![Screenshot](public\agroturismo.postman_collection.json)
+
 
 ## DIAGRAMA TABLAS PHP MYADMIN :bulb:
 
@@ -67,10 +79,14 @@ https://varitxparadise.herokuapp.com/
 
 ## Instalacion :hammer_and_wrench:
 
-:gear: composer update
+:gear: $ git clone https://github.com/lubersol/agroturismo-PHP.git
 
-:gear: php artisan migrate
+:gear: $ cd ../path/to/the/file
 
-:gear: php artisan passport:install
+:gear: $composer update
 
-:gear:php artisan serve (levantar el servidor)
+:gear: $php artisan migrate
+
+:gear: $php artisan passport:instal l
+
+:gear: $php artisan serve (levantar el servidor)

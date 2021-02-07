@@ -1,0 +1,152 @@
+{
+	"variables": [],
+	"info": {
+		"name": "agroturismo",
+		"_postman_id": "2151f13d-bf14-62f8-5441-b2b8a4603820",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/api/register",
+			"request": {
+				"url": "localhost:8000/api/user/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Henry Cavill\",\n\t\"email\":\"henry@gmail.com\",\n\t\"password\":\"henrycavill\"\n}"
+				},
+				"description": "registro agroturismo"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/user/email/anacaves@gmail.com",
+			"request": {
+				"url": "localhost:8000/api/auth/user/email/anacaves@gmail.com",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/rent",
+			"request": {
+				"url": "localhost:8000/api/rent",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZDAxYzJiYTBjMjM2MTk0NWI5YTFmZjAzOGVlODYyYzRmMTgzOGZmNjAyZDhiOGM4NzJlMjNiODE1ZWJhZWYxZGEwMWM5OTc4NjAwZmNlMDIiLCJpYXQiOiIxNjExNTkyMTYwLjIzNTQzMiIsIm5iZiI6IjE2MTE1OTIxNjAuMjM1NDM2IiwiZXhwIjoiMTY0MzEyODE2MC4yMjU0NzAiLCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.SgYluP4pVQRypTgr50Vo6HJKvWXy2wNwdSeEdPO-U8RU1uFUOr14UjppFmHez_FCxuQHkEQKaZ3dd4qEkNJEjyTwx9JS7t4F5bH28hvNqY0fR2fx-tpJkCE3t_xcNfI4S2RqpQINg8azgnwsRkHjSB1n8ne9jxQHR9Lm-7krCAwF6IMPeidhMUa7oHHviJzQrHmA4F9cvSwHJm3rxzonR3KM7nYMWgoz_CdY5fNIVp3pi47t8J-eYngqpBHMi2sqFjaRoroDsZTI00ApptZKklDjAb-dDErbbvA6oISP1tGAMgW1vPAZpd3bQXNABg7KdoCXHtJukcKIq0WMl-y0hv__137QqByPpdLZBo10nnV6znZ8lifF4XTrw99q68RzNDmSoOLfuKjX1fIWDcUtx7clTjIZSZ0ozxGXjToufJw6r0zqb02s3UO0hJVad0xf2HnXAtWQj9W7DTlLkujEC22kZQojWZwjLbHUhnJBo_vSoDcZj12ZhPFan9NByQ-rd6xSKBuse_X4yjfnJ54OnFPoghlLjwBM_LHQ_9HH9452QMEt0XHUNmdUXWvSvaK8O5yTNJI7ewxAJjgx3DEDaJU1Etzl2VTPo0_Q8MwLFHz0Iiu1Eyz2xQvgLwEJnzNkzX8XRJ_cBxBgEo9y-rxfxqXyOZkgWSW9FF0mG62Ik_4",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startDate\":\"2021-02-06\",\n\t\"endDate\":\"2021-02-08\",\n\t\"room_id\":\"3\",\n\t\"user_id\":\"4\"\n}"
+				},
+				"description": "Hacer una reserva"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/login",
+			"request": {
+				"url": "localhost:8000/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"alvarito@hotmail.com\",\n\t\"password\":\"alvarocastro\"\n}"
+				},
+				"description": "login "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/logout",
+			"request": {
+				"url": "localhost:8000/api/logout",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMGEyZGRiMjJhOWU2NjNjODlmMGFmNmJhOTNkMzQ0MjA0NGIwZjNjNWViZjY0MDczOTE2ODE5YzAxYjk5N2I3MTc1MjRiMzQ4NWEzNWVmNDEiLCJpYXQiOiIxNjEyNzA0MzI2LjY3ODc0OCIsIm5iZiI6IjE2MTI3MDQzMjYuNjc4NzU2IiwiZXhwIjoiMTY0NDI0MDMyNi42NjczMjIiLCJzdWIiOiIyMCIsInNjb3BlcyI6W119.vV9fz_YKveFDZ9KfC8_6Iz_-aEaZN-Jv5rAXTWK3x8TC-2rwIJVM7y2Ga4_SeuwBuD3GT2ojMVSNwZS45ktdTkQwQwECnhECTGFiMPAGsaez7o_-BVpHMH3JyHK0plyS3IvuMRhNwIgjuv1K5OMpil7n-1zBAL4k4Md9WG1bnJEEXQWADp6Udpg4qQbkQpwkaG4ALWhZ4q7ox6asqUXQ-Y7xRYFVW6Y_orIbMrfGSP91M0Hp1Bgb-dp9oOrLqnDqqor-lPfLtNNdY0VkppZe8AqK1N3rD0opujkZurl64JI4VnwgFPSIgznEzdJibJ8dLo7My-BXl_sMKFqqZ6a2Vsb5TA75OV6aiCTi8JeS0pAS8scWUfW-SDJiZ1P2I00hKEAg41v2qFY7Ki0DO7MwYRKkml7SivReoEDD-M6CEsgi_h2y38lDyLSlx8KYOZXPKTXtqYwqePo5rSs0En0T0VpZfYz9eC8oZjAl-aEcbWVsYJEijl21nTdNFLYjeqor5hMYbNQw51EfkQ4Sz6pdH0ilEkE8liEnktgYqcz1-y6yPcX5a1z7_L9dRFuL8ox6DNx5oqWlY6shj3zsmAd3_dBD0iPysZ_pSRDWCf_XtXvy6cTXS7sU2xbPHk-XpahcpxSkUn5RVPnlvUhSRkWOL25yQXb73MLkJ-d-Lbwy0A4",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"carber23@yahoo.es\",\n\t\"password\":\"carlangas\"\n}"
+				},
+				"description": "logout api agroturismo php"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/rent/show/20",
+			"request": {
+				"url": "localhost:8000/api/rent/show/20",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTg1ZDUwYzcyYjlmMDlhMGE1YzYyMzlhNGQxMjJhYjNmNmVjMDJlMWYwOTRiZmIyZTAwNGM4OTdlZjZiNTE3ODRlMjUzNTBhYzlkOTg0NWMiLCJpYXQiOiIxNjEyNzA0NzUyLjc5MjI4MiIsIm5iZiI6IjE2MTI3MDQ3NTIuNzkyMjg2IiwiZXhwIjoiMTY0NDI0MDc1Mi43ODIwMzMiLCJzdWIiOiIyMCIsInNjb3BlcyI6W119.bgYnqPTIZ1d5_Y1hf2966d0DlZjst7Q8ENCoJnS5O38DqnJQp3CxYcoc0OiAErECMoBjjge-bncMZ4UrBgJNvPbl4SuHoXn_ooiX4nshdd8b3ZKjew2jg8PEo-p8wItsbATamoDIpkKpyigV9W4oDq3IeV-eVyfZ3ebq54B9VT60yh55ZrugFzDCiLnhn9DR_Z5rZLWvLcm9gCQgXYvn_2INPgcswLSMY-tyTJX-wzG2TTPWYm7GoffBp2jhEORA8McmapCZc5OWYJh-TX8PV5GlE2Ftb4n5oN68HzUypGNslUGsAsBmVV_q7d3XF-e_NaoKb9TzXUZOzfJwznnwQzuoGMZHD94pMEyN1Fk8TXy8UeTb74cfkc_1beyuKfTj3oxmPbJV2jl-DngmiKHjxaPpuvtObiaptqGHSloX2lpjiSEv_TPzeB2qvg4lvYZs66H2QpPyPjpcyEPzRsvFbpZeXrGeMrMUmWHIEdCE7Y6JF3oXMJ14RznW3cKJ60HLHjq1hkP2Ds7hOVvPOqyBlosP4GERiTfmpFWpaltPUBKNln2MeiFgJwmRO_bJqIg4p1t59EPVAYGhvhqvC3sk893qhmKxVlmChMqCQXuV0Z61ndv7x_gZru2BUhDUHAInjW5idJ6CvFcpwPBAUONBo6a5TNVT3TR5dix9yb7yLbY",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Obtener reservas de un usuario.\nUsuario id=20."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/rent/cancel/10",
+			"request": {
+				"url": "localhost:8000/api/rent/cancel/10",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "Cancelar una reserva a través del id de la reserva."
+			},
+			"response": []
+		}
+	]
+}

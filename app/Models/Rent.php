@@ -10,7 +10,6 @@ class Rent extends Model
     use HasFactory;
     public $table = 'rents';
     public $timestampstimestamps = false;
-    
 
     protected $fillable = [
         'startDate',
@@ -18,13 +17,13 @@ class Rent extends Model
         'room_id',
         'user_id'
     ];
-    
+
     public function user()
     {
         return $this->belongsTo('App\Models\User');
     }
-    public function rooms(){
+    public function rooms()
+    {
         return $this->belongsToMany(Room::class); // Muchos a muchos
     }
-    
 }

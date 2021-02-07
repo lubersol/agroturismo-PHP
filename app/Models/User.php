@@ -46,6 +46,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    //Un usuario puede tener muchas reservas. Relacion de 1 a N.
     public function rents()
     {
         return $this->hasMany('App\Models\Rent');
