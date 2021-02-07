@@ -66,8 +66,7 @@ Como *administrador*, puedes ver las reservas de todos los usuarios.
 
 ## POSTMAN ENDPOINTS :round_pushpin:
 
-https://github.com/lubersol/agroturismo-PHP/public/agroturismo.postman_collection.json
-
+Puedes acceder a las colecciones de postman de este proyecto a través de la ruta **public/agroturismo.postman_collection.json**
 
 ## DIAGRAMA TABLAS PHP MYADMIN :bulb:
 
