@@ -1,4 +1,4 @@
-# PROYECTO AGROTURISMO CREADO CON PHP+LARAVEL+MYSQL :four_leaf_clover:
+# PROYECTO AGROTURISMO CREADO CON PHP+LARAVEL+MYSQL :computer:
 
 ![Screenshot](public/treboles.gif)
 
@@ -64,9 +64,9 @@ Como *administrador*, puedes ver las reservas de todos los usuarios.
 ***
 
 
-## POSTMAN ENDPOINTS
+## POSTMAN ENDPOINTS :round_pushpin:
 
-![Screenshot](public\agroturismo.postman_collection.json)
+https://github.com/lubersol/agroturismo-PHP/public/agroturismo.postman_collection.json
 
 
 ## DIAGRAMA TABLAS PHP MYADMIN :bulb:
@@ -83,10 +83,10 @@ https://varitxparadise.herokuapp.com/
 
 :gear: $ cd ../path/to/the/file
 
-:gear: $composer update
+:gear: $ composer update
 
-:gear: $php artisan migrate
+:gear: $ php artisan migrate
 
-:gear: $php artisan passport:instal l
+:gear: $ php artisan passport:install
 
-:gear: $php artisan serve (levantar el servidor)
+:gear: $ php artisan serve
