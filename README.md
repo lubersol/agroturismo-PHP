@@ -44,9 +44,9 @@ Como *administrador*, puedes ver las reservas de todos los usuarios.
 
 ### Clientes: :bust_in_silhouette: 
 
-:round_pushpin: POST localhost:8000/api/register (añade un nuevo usuario).
+:round_pushpin: POST localhost:8000/api/user/register (añade un nuevo usuario).
 
-:round_pushpin: POST localhost:8000/api/login (el usuario introduce su email y la contraseña para entrar).
+:round_pushpin: POST localhost:8000/api/user/login (el usuario introduce su email y la contraseña para entrar).
 
 :round_pushpin: GET localhost:8000/api/logout (el usuario sale de su cuenta).
 
@@ -84,8 +84,10 @@ https://varitxparadise.herokuapp.com/
 
 :gear: $ composer update
 
-:gear: $ php artisan migrate
+:gear: $ php artisan migrate:fresh --seed
 
 :gear: $ php artisan passport:install
+
+:gear: $ php 
 
 :gear: $ php artisan serve

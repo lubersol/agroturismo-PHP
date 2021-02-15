@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -44,36 +44,26 @@ class UserController extends Controller
      */
     public function login(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|string|email',
-            'password' => 'required|string'
-        ]);
-
-        if ($validator->fails()) {
-            response()->json([
-                'created' => false,
-                'errors'  => $validator->errors()->all()
-            ], 400);
+        if (Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
+            $user = Auth::user();
+            $token = $user->createToken('userToken')->accessToken;
+            $result=[];
+            $result['name']=$user->name;
+            $result['token']= $token;
+            $result['role']= $user->rol;
+            return response()->json($result,200);
+        }else{
+            return response()->json(['error'=>'Not authenticated.'],401);
         }
-
-        $credentials = request(['email', 'password']);
-
-        if (!Auth::attempt($credentials))
-            return response()->json(['message' => 'Unauthorized'], 401);
-
-        $user = $request->user();
-        $token = $user->createToken('Personal Access Token');
-
-        return response()->json([
-            'access_token' => $token->accessToken,
-        ]);
     }
+        
     /*
      * Cierre de sesión (anular el token)
      */
     public function logout(Request $request)
     {
-        $request->user()->token()->revoke();
+        $token = $request->user()->token();
+        $token ->revoke();
 
         return response()->json([
             'message' => 'Successfully logged out'
@@ -92,9 +82,9 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    // public function show(Integer $id)
-    // {
-    //     $user = DB::table('users')->where('id', '=', $id)->get();
-    //     return $user;
-    // }
+    public function show(Integer $id)
+    {
+        $user = DB::table('users')->where('id', '=', $id)->get();
+        return $user;
+    }
 }

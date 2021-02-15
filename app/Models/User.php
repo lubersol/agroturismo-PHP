@@ -50,5 +50,6 @@ class User extends Authenticatable
     public function rents()
     {
         return $this->hasMany('App\Models\Rent');
+        return $this->belongsToMany('App\Models\User');
     }
 }

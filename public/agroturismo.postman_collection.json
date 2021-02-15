@@ -8,7 +8,7 @@
 	},
 	"item": [
 		{
-			"name": "localhost:8000/api/register",
+			"name": "localhost:8000/api/user/register",
 			"request": {
 				"url": "localhost:8000/api/user/register",
 				"method": "POST",
@@ -36,7 +36,7 @@
 		{
 			"name": "localhost:8000/api/user/email/anacaves@gmail.com",
 			"request": {
-				"url": "localhost:8000/api/auth/user/email/anacaves@gmail.com",
+				"url": "localhost:8000/api/user/email/anacaves@gmail.com",
 				"method": "POST",
 				"header": [],
 				"body": {},

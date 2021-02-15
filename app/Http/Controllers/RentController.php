@@ -15,15 +15,12 @@ class RentController extends Controller
     public function indexAll()
     {
         return Rent::all();
-    }//Muestra las reservas
+    } //Muestra las reservas
 
     public function index($id)
     {
         $rents = DB::table('rents')->where('user_id', '=', $id)->get();
         return $rents;
-        // $user = Auth::user();
-        // $rents = Rent::where('user_id', '=', $user->id)->get();
-        // return $rents;
     }//Muestra las reservas de un usuario concreto
 
     public function store(Request $request)
@@ -41,7 +38,9 @@ class RentController extends Controller
             ];
         }
         Rent::create($request->all());
+        return response()->json(201);
     }
+
 
     /**
      * Change status to cancelled (0) 
